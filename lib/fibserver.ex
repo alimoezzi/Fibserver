@@ -20,4 +20,7 @@ defmodule Fibserver do
     GenServer.call(pid, {:get, n})
   end
 
+  def end_server(pid) do
+    GenServer.stop(pid, :normal)
+  end
 end
