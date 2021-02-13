@@ -1,6 +1,8 @@
 # Fibserver
 
-**TODO: Add description**
+This `elixir` program creates a pool of processes which communicates with a dedicated `genserver` which calculates Fibonacci number using its `:get` interface. This is a synchronous call so the callee will get blocked until the calculation terminates.
+
+The `Scheduler` module divides a list of input integer into chunks by the number desired process which is provided by user in when calling `run` method of `Scheduler` module.
 
 ## Installation
 
