@@ -32,4 +32,13 @@ defmodule Fibserver do
   def handle_call({:get, n}, _from, state) do
     {:reply, do_fib(n), state}
   end
+
+  defp do_fib(n) do
+    case n do
+      0 -> 0
+      1 -> 1
+      _ -> do_fib(n - 1) + do_fib(n - 2)
+    end
+  end
+end
 end
