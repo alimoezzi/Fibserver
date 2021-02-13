@@ -23,4 +23,9 @@ defmodule Fibserver do
   def end_server(pid) do
     GenServer.stop(pid, :normal)
   end
+
+
+  def handle_call(:start, _from, state) do
+    {:reply, :ready, state}
+  end
 end
