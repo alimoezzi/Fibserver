@@ -28,4 +28,8 @@ defmodule Fibserver do
   def handle_call(:start, _from, state) do
     {:reply, :ready, state}
   end
+
+  def handle_call({:get, n}, _from, state) do
+    {:reply, do_fib(n), state}
+  end
 end
