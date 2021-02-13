@@ -12,4 +12,12 @@ defmodule Fibserver do
     {:ok, init}
   end
 
+  def start(pid) do
+    GenServer.call(pid, :start)
+  end
+
+  def get(pid, n) do
+    GenServer.call(pid, {:get, n})
+  end
+
 end
