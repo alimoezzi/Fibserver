@@ -10,6 +10,7 @@ defmodule Fibserver.Application do
     children = [
       # Starts a worker by calling: Fibserver.Worker.start_link(arg)
       # {Fibserver.Worker, arg}
+      {Fibserver, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
